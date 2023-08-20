@@ -18,6 +18,27 @@
                     <x-nav-link href="{{ route('member') }}" :active="request()->routeIs('member')">
                         {{ __('Membre') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('skill') }}" :active="request()->routeIs('skill')">
+                        {{ __('Competences') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('experience') }}" :active="request()->routeIs('experience')">
+                        {{ __('Experience') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('study') }}" :active="request()->routeIs('study')">
+                        {{ __('Etudes') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('formation') }}" :active="request()->routeIs('formation')">
+                        {{ __('Formation') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('link') }}" :active="request()->routeIs('link')">
+                        {{ __('Liens') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('other') }}" :active="request()->routeIs('other')">
+                        {{ __('Autres') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('role') }}" :active="request()->routeIs('role')">
+                        {{ __('Role') }}
+                    </x-nav-link>
                 </div>
             </div>
 

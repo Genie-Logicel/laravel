@@ -1,6 +1,13 @@
 <?php
 
+use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\FormationController;
+use App\Http\Controllers\LinkController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\OthersController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SkillController;
+use App\Http\Controllers\StudyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +33,36 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::get('/member',[MemberController::class,'index'])->name('member');
-    Route::get('/member/create',[MemberController::class,'create'])->name('member.create');
+
+    // * for members
+    Route::get('/member', [MemberController::class, 'index'])->name('member');
+    Route::get('/member/create', [MemberController::class, 'create'])->name('member.create');
+
+    // * for experiences
+    Route::get('/experience', [ExperienceController::class, 'index'])->name('experience');
+    Route::get('/experience/create', [ExperienceController::class, 'create'])->name('experience.create');
+
+    // * for formation
+    Route::get('/formation', [FormationController::class, 'index'])->name('formation');
+    Route::get('/formation/create', [FormationController::class, 'create'])->name('formation.create');
+
+    // * for links
+    Route::get('/link', [LinkController::class, 'index'])->name('link');
+    Route::get('/link/create', [LinkController::class, 'create'])->name('link.create');
+
+    // * for Others
+    Route::get('/other', [OthersController::class, 'index'])->name('other');
+    Route::get('/other/create', [OthersController::class, 'create'])->name('other.create');
+
+    // * for roles
+    Route::get('/role', [RoleController::class, 'index'])->name('role');
+    Route::get('/role/create', [RoleController::class, 'create'])->name('role.create');
+
+    // * for skills
+    Route::get('/skill', [SkillController::class, 'index'])->name('skill');
+    Route::get('/skill/create', [SkillController::class, 'create'])->name('skill.create');
+
+    // * for study
+    Route::get('/study', [StudyController::class, 'index'])->name('study');
+    Route::get('/study/create', [StudyController::class, 'create'])->name('study.create');
 });
