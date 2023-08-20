@@ -33,11 +33,11 @@
                     <x-nav-link href="{{ route('link') }}" :active="request()->routeIs('link')">
                         {{ __('Liens') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('other') }}" :active="request()->routeIs('other')">
-                        {{ __('Autres') }}
-                    </x-nav-link>
                     <x-nav-link href="{{ route('role') }}" :active="request()->routeIs('role')">
                         {{ __('Role') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('other') }}" :active="request()->routeIs('other')">
+                        {{ __('Autres') }}
                     </x-nav-link>
                 </div>
             </div>

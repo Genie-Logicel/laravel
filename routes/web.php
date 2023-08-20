@@ -56,6 +56,7 @@ Route::middleware([
     // * for Others
     Route::get('/other', [OthersController::class, 'index'])->name('other');
     Route::get('/other/create', [OthersController::class, 'create'])->name('other.create');
+    Route::post('/other/store', [OthersController::class, 'store'])->name('other.store');
 
     // * for roles
     Route::get('/role', [RoleController::class, 'index'])->name('role');
