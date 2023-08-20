@@ -29,6 +29,8 @@ class ExperienceController extends Controller
                 'société' => $request->société,
                 'poste' => $request->poste,
                 'annee' => $request->annee,
+                'created_at' => now(),
+                'updated_at' => now(),
             ]);
             return redirect('/experience')->with('status', 'Data Experience Berhasil Ditambahkan!');
         } catch (\Throwable $th) {
