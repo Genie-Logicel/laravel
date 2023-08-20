@@ -17,4 +17,15 @@ class MemberController extends Controller
     {
         return view('pages.member.add-member');
     }
+
+    function getMembers()
+    {
+
+        $members = DB::table('membres')->get();
+
+        return response()->json([
+            'status' => 'success',
+            'data' => $members
+        ], 200);
+    }
 }
