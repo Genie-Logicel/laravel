@@ -17,7 +17,35 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white p-4 overflow-hidden shadow-xl sm:rounded-lg">
                 <div>
-                    List
+                    <div class="overflow-x-auto">
+                        <table class="table">
+                            <!-- head -->
+                            <thead>
+                                <tr class="bg-base-200">
+                                    <th></th>
+                                    <th>Nom</th>
+                                    <th>Descriptions</th>
+                                    <th>Membres</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row 1 -->
+                                @forelse ($skills as $index => $item)
+                                <tr>
+                                    <th>{{ $index + 1 }}</th>
+                                    <td>{{ $item->nom }}</td>
+                                    <td>{{ $item->description }}</td>
+                                    <td></td>
+                                </tr>
+                                @empty
+                                <tr>
+                                    <td colspan="4" class="text-center">Vide</td>
+                                </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

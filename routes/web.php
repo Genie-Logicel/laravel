@@ -41,6 +41,7 @@ Route::middleware([
     // * for experiences
     Route::get('/experience', [ExperienceController::class, 'index'])->name('experience');
     Route::get('/experience/create', [ExperienceController::class, 'create'])->name('experience.create');
+    Route::post('/experience/store', [ExperienceController::class, 'store'])->name('experience.store');
 
     // * for formation
     Route::get('/formation', [FormationController::class, 'index'])->name('formation');
@@ -61,6 +62,7 @@ Route::middleware([
     // * for skills
     Route::get('/skill', [SkillController::class, 'index'])->name('skill');
     Route::get('/skill/create', [SkillController::class, 'create'])->name('skill.create');
+    Route::post('/skill/store', [SkillController::class, 'store'])->name('skill.store');
 
     // * for study
     Route::get('/study', [StudyController::class, 'index'])->name('study');
