@@ -30,10 +30,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-
     // * for members
     Route::get('/member', [MemberController::class, 'index'])->name('member');
     Route::get('/member/create', [MemberController::class, 'create'])->name('member.create');

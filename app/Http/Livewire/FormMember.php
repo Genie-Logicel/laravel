@@ -35,7 +35,7 @@ class FormMember extends Component
     public $inputs_other = [];
     public $i_other = 0;
 
-    public $nom, $prenom, $adresse, $email, $image, $role_id;
+    public $nom, $prenom, $adresse, $email, $image, $role_id , $sex;
 
 
     public function add($i)
@@ -132,6 +132,7 @@ class FormMember extends Component
                 'adresse' => $this->adresse,
                 'email' => $this->email,
                 'image' => $this->image->getClientOriginalName(),
+                'sex' => $this->sex,
                 'competence_id' => $id_skills,
                 'role_id' => $this->role_id,
                 'etude_id' => $id_study,

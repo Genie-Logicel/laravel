@@ -50,6 +50,16 @@
                 </label>
                 <input wire:model='email' type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
             </div>
+            <div class="form-control w-full max-w-xs">
+                <label class="label">
+                    <span class="label-text">Sex</span>
+                </label>
+                <select wire:model='sex' class="select select-bordered">
+                    <option value="" selected>Pick one</option>
+                    <option value="male">Homme</option>
+                    <option value="female">Femme</option>
+                </select>
+            </div>
         </div>
     </div>
 
@@ -102,7 +112,7 @@
                 @foreach($inputs_exp as $key => $value)
                 <div class="flex justify-between items-center">
                     <select wire:model='id_exp.{{ $key }}' class="select select-bordered w-full max-w-xs">
-                        <option  value=""  selected>Liste des experiences</option>
+                        <option value="" selected>Liste des experiences</option>
                         @forelse ($experiences as $item)
                         <option value="{{ $item->id }}">{{ $item->société }} | {{ $item->poste }} | {{ $item->annee }}</option>
                         @empty
@@ -135,7 +145,7 @@
                 @foreach($inputs_study as $key => $value)
                 <div class="flex justify-between items-center">
                     <select wire:model='id_study.{{ $key }}' class="select select-bordered w-full max-w-xs">
-                        <option  value=""  selected>Liste des études</option>
+                        <option value="" selected>Liste des études</option>
                         @forelse ($studies as $item)
                         <option value="{{ $item->id }}">{{ $item->institution }} | {{ $item->niveau }} | {{ $item->domaine }}</option>
                         @empty
@@ -171,7 +181,7 @@
                 @foreach($inputs_form as $key => $value)
                 <div class="flex justify-between items-center">
                     <select wire:model='id_form.{{ $key }}' class="select select-bordered w-full max-w-xs">
-                        <option  value=""  selected>Liste des formations</option>
+                        <option value="" selected>Liste des formations</option>
                         @forelse ($formations as $item)
                         <option value="{{ $item->id }}">{{ $item->titre }} | {{ $item->institution }} | {{ $item->annee }}</option>
                         @empty
@@ -204,7 +214,7 @@
                 @foreach($inputs_link as $key => $value)
                 <div class="flex justify-between items-center">
                     <select wire:model='id_link.{{ $key }}' class="select select-bordered w-full max-w-xs">
-                        <option  value=""  selected>Liste des liens</option>
+                        <option value="" selected>Liste des liens</option>
                         @forelse ($links as $item)
                         <option value="{{ $item->id }}">{{ $item->nom }} | {{ $item->relation }}</option>
                         @empty
@@ -237,7 +247,7 @@
                 @foreach($inputs_other as $key => $value)
                 <div class="flex justify-between items-center">
                     <select wire:model='id_other.{{ $key }}' class="select select-bordered w-full max-w-xs">
-                        <option  value=""  selected>Liste des autres</option>
+                        <option value="" selected>Liste des autres</option>
                         @forelse ($others as $item)
                         <option value="{{ $item->id }}">{{ $item->nom }}</option>
                         @empty
