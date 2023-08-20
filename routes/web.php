@@ -51,6 +51,7 @@ Route::middleware([
     // * for links
     Route::get('/link', [LinkController::class, 'index'])->name('link');
     Route::get('/link/create', [LinkController::class, 'create'])->name('link.create');
+    Route::post('/link/store', [LinkController::class, 'store'])->name('link.store');
 
     // * for Others
     Route::get('/other', [OthersController::class, 'index'])->name('other');
