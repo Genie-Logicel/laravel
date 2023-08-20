@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MemberController extends Controller
 {
     function index()
     {
-        return view('pages.member.member');
+        $members = DB::table('membres')->get();
+        return view('pages.member.member', ['members' => $members]);
     }
 
     function create()
