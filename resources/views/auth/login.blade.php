@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <h1 class="text-5xl mb-5 font-bold">Back Office Emi stutend</h1>
+            {{-- <x-authentication-card-logo /> --}}
         </x-slot>
 
         <x-validation-errors class="mb-4" />
