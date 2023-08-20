@@ -60,6 +60,7 @@ Route::middleware([
     // * for roles
     Route::get('/role', [RoleController::class, 'index'])->name('role');
     Route::get('/role/create', [RoleController::class, 'create'])->name('role.create');
+    Route::post('/role/store', [RoleController::class, 'store'])->name('role.store');
 
     // * for skills
     Route::get('/skill', [SkillController::class, 'index'])->name('skill');
