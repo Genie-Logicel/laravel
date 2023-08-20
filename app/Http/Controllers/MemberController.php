@@ -21,7 +21,7 @@ class MemberController extends Controller
     function getMembers()
     {
 
-        $members = DB::table('membres')->get();
+        $members = DB::table('membres')->join('roles','roles.id','=','membres.role_id')->select('membres.*','roles.nom as role_nom')->get();
 
         return response()->json([
             'status' => 'success',

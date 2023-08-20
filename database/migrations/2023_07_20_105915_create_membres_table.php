@@ -19,12 +19,14 @@ return new class extends Migration
             $table->string('adresse');
             $table->string('email');
             $table->string('image')->nullable();
+            $table->string('sex')->nullable();
             $table->string('competence_id')->nullable();
             $table->string('role_id')->nullable();
             $table->string('etude_id')->nullable();
             $table->string('autre_competence_id')->nullable();
             $table->string('lien_personnel_id')->nullable();
             $table->string('formation_id')->nullable();
+            $table->string('experience_id')->nullable();
             $table->timestamps();
         });
     }
