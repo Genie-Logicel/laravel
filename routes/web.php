@@ -46,6 +46,7 @@ Route::middleware([
     // * for formation
     Route::get('/formation', [FormationController::class, 'index'])->name('formation');
     Route::get('/formation/create', [FormationController::class, 'create'])->name('formation.create');
+    Route::post('/formation/store', [FormationController::class, 'store'])->name('formation.store');
 
     // * for links
     Route::get('/link', [LinkController::class, 'index'])->name('link');
