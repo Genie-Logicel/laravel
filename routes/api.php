@@ -21,3 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // * get all members
 Route::get('/members', [MemberController::class, 'getMembers']);
+
+// * get member by id
+Route::get('/members/{id}', [MemberController::class, 'getMemberById']);
