@@ -40,7 +40,7 @@
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="4" class="text-center">Vide</td>
+                                    <td colspan="5" class="text-center">Vide</td>
                                 </tr>
                                 @endforelse
                             </tbody>

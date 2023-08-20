@@ -67,4 +67,5 @@ Route::middleware([
     // * for study
     Route::get('/study', [StudyController::class, 'index'])->name('study');
     Route::get('/study/create', [StudyController::class, 'create'])->name('study.create');
+    Route::post('/study/store', [StudyController::class, 'store'])->name('study.store');
 });
